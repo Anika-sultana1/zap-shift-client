@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Booking Pick & Drop",
+    "description": "From personal packages to business shipments — we deliver on time, every time.",
+    "icon": "pick_drop"
+  },
+  {
+    "title": "Express Delivery",
+    "description": "Fast and secure same-day delivery service for urgent parcels.",
+    "icon": "express_delivery"
+  },
+  {
+    "title": "Cash on Delivery",
+    "description": "Accept cash from customers upon delivery for a smoother transaction experience.",
+    "icon": "cod"
+  },
+  {
+    "title": "Real-Time Tracking",
+    "description": "Track your parcels live with accurate and up-to-date status updates.",
+    "icon": "tracking"
+  },
+  {
+    "title": "Warehouse Storage",
+    "description": "Short-term and long-term storage solutions for your business needs.",
+    "icon": "warehouse"
+  },
+  {
+    "title": "Bulk Shipment Service",
+    "description": "Affordable and reliable service for sending large quantities of products.",
+    "icon": "bulk_shipment"
+  }
+]
