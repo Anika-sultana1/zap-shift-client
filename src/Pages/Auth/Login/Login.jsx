@@ -1,23 +1,45 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import UseAuth from '../../../Hooks/UseAuth';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import SocialLogin from '../SocailLogin/SocialLogin';
 
 const Login = () => {
 
-  const { register, handleSubmit, formState: { errors } } = useForm();
-  const { signInUser } = UseAuth();
+  const { register, handleSubmit, formState: { errors } , getValues} = useForm();
+  const { signInUser ,forGetPassword} = UseAuth();
+const location = useLocation();
+const navigate = useNavigate();
 
   const handleLogin = (data) => {
     signInUser(data.email, data.password)
       .then(result => {
         console.log(result.user);
+        navigate(location?.state || '/')
       })
       .catch(error => {
         console.log(error);
       });
   };
+
+  const handlePasswored = (email)=>{
+
+  if (!email) {
+    alert("Please enter your email first!");
+    return;
+  }
+
+    forGetPassword(email)
+    .then(result => {
+      console.log('forget password complete',result)
+      alert('your password will reset , please check your inbox')
+      
+    })
+    .catch(error => {
+      console.log(error)
+    })
+
+  }
 
   return (
     <div className="flex justify-center mt-10">
@@ -59,7 +81,7 @@ const Login = () => {
 
             {/* Forgot password */}
             <div>
-              <a className="link link-hover text-sm mt-2 inline-block">
+              <a onClick={()=>handlePasswored(getValues('email'))} className="link link-hover text-sm mt-2 inline-block">
                 Forgot password?
               </a>
             </div>

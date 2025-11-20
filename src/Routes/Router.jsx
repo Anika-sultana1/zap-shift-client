@@ -1,11 +1,13 @@
 import { createBrowserRouter } from "react-router";
 
-import Home from "./Pages/Home/Home";
-import Coverage from "./Pages/Coverage/Coverage";
-import RootLayout from "./Layout/RootLayout";
-import AuthLayout from "./Layout/AuthLayout";
-import Login from "./Pages/Auth/Login/Login";
-import Register from "./Pages/Auth/Register/Register";
+import Home from '../Pages/Home/Home'
+import Coverage from "../Pages/Coverage/Coverage";
+import RootLayout from "../Layout/RootLayout";
+import AuthLayout from "../Layout/AuthLayout";
+import Login from "../Pages/Auth/Login/Login";
+import Register from "../Pages/Auth/Register/Register";
+import Rider from "../Pages/Rider/Rider";
+import PrivateRoutes from './PrivateRoutes'
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +24,10 @@ export const router = createBrowserRouter([
         Component: Coverage,
         loader: () => fetch("/ServiceCenter.json"),
       },
+      {
+        path: '/rider',
+        element: <PrivateRoutes><Rider></Rider></PrivateRoutes>,
+      }
     ],
   },
   {
@@ -29,11 +35,11 @@ export const router = createBrowserRouter([
     element: <AuthLayout />,
     children: [
       {
-        path: "login",   // ✔️ relative child route
+        path: "login",   
         Component: Login,
       },
       {
-        path: "register", // ✔️ relative child route
+        path: "register", 
         Component: Register,
       },
     ],
