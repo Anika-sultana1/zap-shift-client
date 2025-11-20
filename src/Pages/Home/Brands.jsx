@@ -9,6 +9,8 @@ import randstad from '../../assets/brands/randstad.png'
 import star from '../../assets/brands/star.png'
 import startPeople from '../../assets/brands/start_people.png'
 import { Autoplay } from 'swiper/modules';
+import image1 from '../../assets/live-tracking.png'
+import image2 from '../../assets/safe-delivery.png'
 
 const Brands = () => {
 
@@ -38,6 +40,7 @@ const brandsLogos = [amazon, amazonVector, casio, moonstar, randstad, star, star
     }
 
 
+
 {/* 
             <SwiperSlide>
 <img src={amazon} alt="" />
@@ -62,6 +65,46 @@ const brandsLogos = [amazon, amazonVector, casio, moonstar, randstad, star, star
             </SwiperSlide> */}
 
         </Swiper>
+          <div className="divider mx-20"></div>
+          <div className="flex flex-col gap-5 rounded-box shadow-md my-10 mx-20">
+  
+  <div className="flex gap-10 p-5 bg-white rounded-2xl">
+    <div><img className="size-30 rounded-box" src={image1}/></div>
+     <div className="divider divider-horizontal"></div>
+    <div className='flex flex-col justify-center items-star space-y-2'>
+      <p className='font-semibold text-2xl text-secondary'>Live Parcel Tracking</p>
+    
+    <p className="list-col-wrap text-xs">
+      Stay updated in real-time with our live parcel tracking feature. From pick-up to delivery, monitor your shipment's journey and get instant status updates for complete peace of mind.
+    </p>
+ </div>
+  </div>
+  <div className="flex gap-10 p-5 bg-white rounded-2xl">
+    <div><img className="size-30 rounded-box" src={image2}/></div>
+     <div className="divider divider-horizontal"></div>
+    <div className='flex flex-col justify-center items-star space-y-2'>
+      <p className='font-semibold text-2xl text-secondary'>100% Safe Delivery</p>
+    
+    <p className="list-col-wrap text-xs">
+      We ensure your parcels are handled with the utmost care and delivered securely to their destination. Our reliable process guarantees safe and damage-free delivery every time.
+    </p>
+ </div>
+  </div>
+  <div className="flex gap-10 p-5 bg-white rounded-2xl">
+    <div><img className="size-30 rounded-box" src={image2}/></div>
+     <div className="divider divider-horizontal"></div>
+    <div className='flex flex-col justify-center items-star space-y-2'>
+      <p className='font-semibold text-2xl text-secondary'>24/7 Call Center Support</p>
+    
+    <p className="list-col-wrap text-xs">
+     Our dedicated support team is available around the clock to assist you with any questions, updates, or delivery concerns—anytime you need us.
+    </p>
+ </div>
+  </div>
+
+
+  
+</div>
     </div>
     );
 };

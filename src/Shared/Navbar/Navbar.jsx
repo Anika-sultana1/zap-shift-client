@@ -1,11 +1,13 @@
 import React from 'react';
 import Logo from '../../Components/Logo/Logo';
+import { Link } from 'react-router';
 
 const Navbar = () => {
 const links = <>
-        <li><a>Service</a></li>
-    
-        <li><a>Career</a></li>
+       
+        <li><Link>Service</Link></li>
+        <li><Link>Career</Link></li>
+        <li><Link to='/coverage'>Coverage</Link></li>
 </>
 
     return (

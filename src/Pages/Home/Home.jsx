@@ -5,6 +5,8 @@ import HowItWorks from '../HowItWorks/HowItWorks';
 import OurServices from '../OurServices/OurServices';
 import Brands from './Brands';
 import Reviews from '../Reviews/Reviews';
+import Merchant from './Merchant';
+import FAQ from './FAQ';
 
 const reviewsPromise = fetch('/reviews.json').then(res => res.json())
 
@@ -19,7 +21,9 @@ const bannerDocs = useLoaderData();
             <HowItWorks></HowItWorks>
             <OurServices bannerDocs={bannerDocs}></OurServices> 
             <Brands></Brands>
+            <Merchant></Merchant>
             <Reviews reviewsPromise={reviewsPromise}></Reviews>
+       <FAQ></FAQ>
         </div>
     );
 };
