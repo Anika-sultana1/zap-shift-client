@@ -9,6 +9,7 @@ const links = <>
         <li><Link>Service</Link></li>
         <li><Link>Career</Link></li>
         <li><Link to='/coverage'>Coverage</Link></li>
+        <li><Link to='/send-parcel'>Send Parcel</Link></li>
 </>
 const {user,logOut} = useAuth()
  
