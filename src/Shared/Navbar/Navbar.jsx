@@ -4,14 +4,24 @@ import { Link } from 'react-router';
 import useAuth from '../../Hooks/useAuth'
 
 const Navbar = () => {
-const links = <>
-       
-        <li><Link>Service</Link></li>
-        <li><Link>Career</Link></li>
-        <li><Link to='/coverage'>Coverage</Link></li>
-        <li><Link to='/send-parcel'>Send Parcel</Link></li>
-</>
+
 const {user,logOut} = useAuth()
+
+const links = (
+  <>
+    <li><Link>Service</Link></li>
+    <li><Link>Career</Link></li>
+    <li><Link to='/coverage'>Coverage</Link></li>
+    <li><Link to='/send-parcel'>Send Parcel</Link></li>
+
+    {user && (
+      <li><Link to='/dashboard'>My Parcels</Link></li>
+    )}
+  </>
+)
+
+
+
  
 const handleLogOut = ()=>{
   logOut()
